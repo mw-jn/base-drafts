@@ -5770,7 +5770,7 @@ Iyengar & Thomson        Expires 10 October 2020              [Page 103]
 Internet-Draft           QUIC Transport Protocol              April 2020
 
 
-17.2.5.3.  Completing a Handshake After Retry
+17.2.5.3.  Continuing a Handshake After Retry
 
    The next Initial packet from the client uses the connection ID and
    token values from the Retry packet (see Section 7.2).  Aside from
