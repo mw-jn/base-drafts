@@ -26,7 +26,7 @@ Note to Readers
 
    Working Group information can be found at https://github.com/quicwg;
    source code and issues list for this draft can be found at
-   ()[https://github.com/quicwg/base-drafts/labels/-transport).
+   https://github.com/quicwg/base-drafts/labels/-transport.
 
 Status of This Memo
 
