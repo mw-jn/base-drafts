@@ -3171,7 +3171,7 @@ authenticated by including all values in transport parameters; see
 <a href="#transport-parameters" class="xref">Section 7.4</a>. This ensures that all connection IDs used for the
 handshake are also authenticated by the cryptographic handshake.<a href="#section-7.3-1" class="pilcrow">¶</a></p>
 <p id="section-7.3-2">Each endpoint includes the value of the Source Connection ID field from the most
-recent Initial packet it sent in the handshake_connection_id transport
+recent Initial packet it sent in the initial_connection_id transport
 parameter; see <a href="#transport-parameter-definitions" class="xref">Section 18.2</a>. A server includes the
 Destination Connection ID field it receives in original Initial packets from the
 client - Initial packets received by the server prior to sending a Retry packet
@@ -3186,7 +3186,7 @@ connection ID for a successful connection by injecting packets carrying
 attacker-chosen connection IDs during the handshake. An endpoint MUST
 treat any of the following as a connection error of type PROTOCOL_VIOLATION:<a href="#section-7.3-3" class="pilcrow">¶</a></p>
 <ul>
-<li id="section-7.3-4.1">absence of the handshake_connection_id transport parameter from either
+<li id="section-7.3-4.1">absence of the initial_connection_id transport parameter from either
 endpoint,<a href="#section-7.3-4.1" class="pilcrow">¶</a>
 </li>
 <li id="section-7.3-4.2">absence of the original_connection_id transport parameter from the server,<a href="#section-7.3-4.2" class="pilcrow">¶</a>
@@ -3249,7 +3249,7 @@ parameters established in the handshake.<a href="#section-7.4.1-1" class="pilcro
 specify whether they MUST, MAY, or MUST NOT be stored for 0-RTT. A client need
 not store a transport parameter it cannot process.<a href="#section-7.4.1-2" class="pilcrow">¶</a></p>
 <p id="section-7.4.1-3">A client MUST NOT use remembered values for the following parameters:
-ack_delay_exponent, handshake_connection_id, original_connection_id,
+ack_delay_exponent, initial_connection_id, original_connection_id,
 preferred_address, retry_connection_id, and stateless_reset_token. The client
 MUST use the server's new values in the handshake instead and, absent new
 values from the server, the default value.<a href="#section-7.4.1-3" class="pilcrow">¶</a></p>
@@ -6802,7 +6802,7 @@ transport parameter is absent, a default of 2 is assumed.
 When a zero-length connection ID is being used, the active_connection_id_limit
 parameter MUST NOT be sent.<a href="#section-18.2-6.2" class="pilcrow">¶</a>
 </dd>
-<dt id="section-18.2-6.3">handshake_connection_id (0x0f):</dt>
+<dt id="section-18.2-6.3">initial_connection_id (0x0f):</dt>
 <dd id="section-18.2-6.4">
   The value that the endpoint included in the Source Connection ID field of the
 first Initial packet it sends during the handshake; see <a href="#cid-auth" class="xref">Section 7.3</a>.<a href="#section-18.2-6.4" class="pilcrow">¶</a>
@@ -8936,7 +8936,7 @@ this registry MUST include the following fields:<a href="#section-22.2-3" class=
             </tr>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">0x0f</td>
-              <td class="text-left" rowspan="1" colspan="1">handshake_connection_id</td>
+              <td class="text-left" rowspan="1" colspan="1">initial_connection_id</td>
               <td class="text-left" rowspan="1" colspan="1">
                 <a href="#transport-parameter-definitions" class="xref">Section 18.2</a>
 </td>
