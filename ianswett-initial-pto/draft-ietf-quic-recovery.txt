@@ -692,8 +692,8 @@ Internet-Draft             QUIC Loss Detection                April 2020
    When a PTO timer expires, the PTO period MUST be set to twice its
    current value.  The PTO period is set based on the latest RTT
    information when receiving an acknowledgement if the peer has
-   completed address validation.  The PTO timer is not decreased while
-   the peer is validating the address, to ensure the endpoint's anti-
+   completed address validation.  The PTO backoff is not decreased while
+   the peer is validating the address, to ensure the client's anti-
    deadlock timer does not fire too aggressively when the server does
    not yet have handshake data to send.
 
