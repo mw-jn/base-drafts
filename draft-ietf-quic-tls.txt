@@ -2160,9 +2160,6 @@ Internet-Draft          Using TLS to Secure QUIC              April 2020
    approach 2^(-L/2), that is, the birthday bound.  For the algorithms
    described in this document, that probability is one in 2^64.
 
-   Note:  In some cases, inputs shorter than the full size required by
-      the packet protection algorithm might be used.
-
    To prevent an attacker from modifying packet headers, the header is
    transitively authenticated using packet protection; the entire packet
    header is part of the authenticated additional data.  Protected
@@ -2178,6 +2175,9 @@ Internet-Draft          Using TLS to Secure QUIC              April 2020
    duplicate packet numbers without attempting to remove packet
    protection they could reveal through timing side-channels that the
    packet number matches a received packet.  For authentication to be
+   free from side-channels, the entire process of header protection
+   removal, packet number recovery, and packet protection removal MUST
+   be applied together without timing and other side-channels.
 
 
 
@@ -2185,10 +2185,6 @@ Thomson & Turner         Expires 16 October 2020               [Page 39]
 
 Internet-Draft          Using TLS to Secure QUIC              April 2020
 
-
-   free from side-channels, the entire process of header protection
-   removal, packet number recovery, and packet protection removal MUST
-   be applied together without timing and other side-channels.
 
    For the sending of packets, construction and protection of packet
    payloads and packet numbers MUST be free from side-channels that
@@ -2234,6 +2230,10 @@ Internet-Draft          Using TLS to Secure QUIC              April 2020
    The initial secrets use a key that is specific to the negotiated QUIC
    version.  New QUIC versions SHOULD define a new salt value used in
    calculating initial secrets.
+
+
+
+
 
 
 

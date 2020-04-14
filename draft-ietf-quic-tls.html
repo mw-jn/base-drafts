@@ -2966,17 +2966,10 @@ ciphertext sample reveals the exclusive OR of the protected fields.  Assuming
 that the AEAD acts as a PRF, if L bits are sampled, the odds of two ciphertext
 samples being identical approach 2^(-L/2), that is, the birthday bound. For the
 algorithms described in this document, that probability is one in 2^64.<a href="#section-9.3-5" class="pilcrow">¶</a></p>
-<dl class="dlParallel" id="section-9.3-6">
-          <dt id="section-9.3-6.1">Note:</dt>
-<dd id="section-9.3-6.2">
-  In some cases, inputs shorter than the full size required by the packet
-protection algorithm might be used.<a href="#section-9.3-6.2" class="pilcrow">¶</a>
-</dd>
-</dl>
-<p id="section-9.3-7">To prevent an attacker from modifying packet headers, the header is transitively
+<p id="section-9.3-6">To prevent an attacker from modifying packet headers, the header is transitively
 authenticated using packet protection; the entire packet header is part of the
 authenticated additional data.  Protected fields that are falsified or modified
-can only be detected once the packet protection is removed.<a href="#section-9.3-7" class="pilcrow">¶</a></p>
+can only be detected once the packet protection is removed.<a href="#section-9.3-6" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="hp-side-channel">
