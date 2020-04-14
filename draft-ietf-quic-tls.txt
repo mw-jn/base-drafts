@@ -20,14 +20,13 @@ Abstract
 Note to Readers
 
    Discussion of this draft takes place on the QUIC working group
-   mailing list (quic@ietf.org), which is archived at
-   https://mailarchive.ietf.org/arch/search/?email_list=quic
-   (https://mailarchive.ietf.org/arch/search/?email_list=quic).
+   mailing list (quic@ietf.org (mailto:quic@ietf.org)), which is
+   archived at https://mailarchive.ietf.org/arch/
+   search/?email_list=quic.
 
-   Working Group information can be found at https://github.com/quicwg
-   (https://github.com/quicwg); source code and issues list for this
-   draft can be found at https://github.com/quicwg/base-drafts/labels/-
-   tls (https://github.com/quicwg/base-drafts/labels/-tls).
+   Working Group information can be found at https://github.com/quicwg;
+   source code and issues list for this draft can be found at
+   https://github.com/quicwg/base-drafts/labels/-tls.
 
 Status of This Memo
 
@@ -50,6 +49,7 @@ Copyright Notice
 
    Copyright (c) 2020 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
+
 
 
 
@@ -195,8 +195,8 @@ Internet-Draft          Using TLS to Secure QUIC              April 2020
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
-   "OPTIONAL" in this document are to be interpreted as described in BCP
-   14 [RFC2119] [RFC8174] when, and only when, they appear in all
+   "OPTIONAL" in this document are to be interpreted as described in
+   BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
 
    This document uses the terminology established in [QUIC-TRANSPORT].

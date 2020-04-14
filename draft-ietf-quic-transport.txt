@@ -21,12 +21,12 @@ Abstract
 Note to Readers
 
    Discussion of this draft takes place on the QUIC working group
-   mailing list (quic@ietf.org), which is archived at
-   <https://mailarchive.ietf.org/arch/search/?email_list=quic>.
+   mailing list (quic@ietf.org (mailto:quic@ietf.org)), which is
+   archived at https://mailarchive.ietf.org/arch/search/?email_list=quic
 
-   Working Group information can be found at <https://github.com/
-   quicwg>; source code and issues list for this draft can be found at
-   <https://github.com/quicwg/base-drafts/labels/-transport>.
+   Working Group information can be found at https://github.com/quicwg;
+   source code and issues list for this draft can be found at
+   https://github.com/quicwg/base-drafts/labels/-transport.
 
 Status of This Memo
 
@@ -411,10 +411,10 @@ Internet-Draft           QUIC Transport Protocol              April 2020
 
 1.2.  Terms and Definitions
 
-   The keywords "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
-   "OPTIONAL" in this document are to be interpreted as described in BCP
-   14 [RFC2119] [RFC8174] when, and only when, they appear in all
+   "OPTIONAL" in this document are to be interpreted as described in
+   BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
 
    Commonly used terms in the document are described below.
@@ -4999,7 +4999,7 @@ Internet-Draft           QUIC Transport Protocol              April 2020
 
    Implementors are encouraged to register version numbers of QUIC that
    they are using for private experimentation on the GitHub wiki at
-   <https://github.com/quicwg/base-drafts/wiki/QUIC-Versions>.
+   https://github.com/quicwg/base-drafts/wiki/QUIC-Versions.
 
 16.  Variable-Length Integer Encoding
 
@@ -8266,7 +8266,7 @@ Internet-Draft           QUIC Transport Protocol              April 2020
 
    All registrations in this document are assigned a permanent status
    and list as contact both the IESG (ietf@ietf.org) and the QUIC
-   working group (quic@ietf.org).
+   working group (quic@ietf.org (mailto:quic@ietf.org)).
 
 22.2.  QUIC Transport Parameter Registry
 
