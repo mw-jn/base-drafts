@@ -2727,20 +2727,24 @@ connection error of type H3_SETTINGS_ERROR.<a href="#section-7.2.4-6" class="pil
 <p id="section-7.2.4-7">The payload of a SETTINGS frame consists of zero or more parameters.  Each
 parameter consists of a setting identifier and a value, both encoded as QUIC
 variable-length integers.<a href="#section-7.2.4-7" class="pilcrow">¶</a></p>
-<span id="name-settings-parameter-format"></span><div id="fig-ext-settings">
+<span id="name-settings-frame"></span><div id="fig-ext-settings">
 <figure id="figure-7">
             <div class="artwork art-text alignLeft art-drawing" id="section-7.2.4-8.1">
 <pre>
+Setting {
+  Identifier (i),
+  Value (i),
+}
+
 SETTINGS Frame {
   Type (i) = 0x4,
   Length (i),
-  Identifier (i),
-  Value (i),
+  Setting (..) ...,
 }
 </pre>
 </div>
 <figcaption><a href="#figure-7" class="selfRef">Figure 7</a>:
-<a href="#name-settings-parameter-format" class="selfRef">SETTINGS Parameter Format</a>
+<a href="#name-settings-frame" class="selfRef">SETTINGS Frame</a>
             </figcaption></figure>
 </div>
 <p id="section-7.2.4-9">An implementation MUST ignore the contents for any SETTINGS identifier it does
