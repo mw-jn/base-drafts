@@ -2597,7 +2597,7 @@ associated with an HTTP request or response payload.<a href="#section-7.2.1-1" c
 <p id="section-7.2.1-2">DATA frames MUST be associated with an HTTP request or response.  If a DATA
 frame is received on a control stream, the recipient MUST respond with a
 connection error (<a href="#errors" class="xref">Section 8</a>) of type H3_FRAME_UNEXPECTED.<a href="#section-7.2.1-2" class="pilcrow">¶</a></p>
-<span id="name-data-frame-payload"></span><div id="fig-data">
+<span id="name-data-frame"></span><div id="fig-data">
 <figure id="figure-4">
             <div class="artwork art-text alignLeft art-drawing" id="section-7.2.1-3.1">
 <pre>
@@ -2609,7 +2609,7 @@ DATA Frame {
 </pre>
 </div>
 <figcaption><a href="#figure-4" class="selfRef">Figure 4</a>:
-<a href="#name-data-frame-payload" class="selfRef">DATA Frame Payload</a>
+<a href="#name-data-frame" class="selfRef">DATA Frame</a>
             </figcaption></figure>
 </div>
 </section>
@@ -2621,7 +2621,7 @@ DATA Frame {
           </h4>
 <p id="section-7.2.2-1">The HEADERS frame (type=0x1) is used to carry an HTTP field section, encoded
 using QPACK. See <span>[<a href="#QPACK" class="xref">QPACK</a>]</span> for more details.<a href="#section-7.2.2-1" class="pilcrow">¶</a></p>
-<span id="name-headers-frame-payload"></span><div id="fig-headers">
+<span id="name-headers-frame"></span><div id="fig-headers">
 <figure id="figure-5">
             <div class="artwork art-text alignLeft art-drawing" id="section-7.2.2-2.1">
 <pre>
@@ -2633,7 +2633,7 @@ HEADERS Frame {
 </pre>
 </div>
 <figcaption><a href="#figure-5" class="selfRef">Figure 5</a>:
-<a href="#name-headers-frame-payload" class="selfRef">HEADERS Frame Payload</a>
+<a href="#name-headers-frame" class="selfRef">HEADERS Frame</a>
             </figcaption></figure>
 </div>
 <p id="section-7.2.2-3">HEADERS frames can only be sent on request / push streams.  If a HEADERS frame
@@ -2667,7 +2667,7 @@ has already received a corresponding push stream.<a href="#section-7.2.3-4" clas
 <p id="section-7.2.3-5">A CANCEL_PUSH frame is sent on the control stream.  Receiving a CANCEL_PUSH
 frame on a stream other than the control stream MUST be treated as a connection
 error of type H3_FRAME_UNEXPECTED.<a href="#section-7.2.3-5" class="pilcrow">¶</a></p>
-<span id="name-cancel_push-frame-payload"></span><div id="fig-cancel-push">
+<span id="name-cancel_push-frame"></span><div id="fig-cancel-push">
 <figure id="figure-6">
             <div class="artwork art-text alignLeft art-drawing" id="section-7.2.3-6.1">
 <pre>
@@ -2679,7 +2679,7 @@ CANCEL_PUSH Frame {
 </pre>
 </div>
 <figcaption><a href="#figure-6" class="selfRef">Figure 6</a>:
-<a href="#name-cancel_push-frame-payload" class="selfRef">CANCEL_PUSH Frame Payload</a>
+<a href="#name-cancel_push-frame" class="selfRef">CANCEL_PUSH Frame</a>
             </figcaption></figure>
 </div>
 <p id="section-7.2.3-7">The CANCEL_PUSH frame carries a Push ID encoded as a variable-length integer.
@@ -2827,7 +2827,7 @@ error of type H3_SETTINGS_ERROR.<a href="#section-7.2.4.2-8" class="pilcrow">¶<
           </h4>
 <p id="section-7.2.5-1">The PUSH_PROMISE frame (type=0x5) is used to carry a promised request header
 field section from server to client on a request stream, as in HTTP/2.<a href="#section-7.2.5-1" class="pilcrow">¶</a></p>
-<span id="name-push_promise-frame-payload"></span><div id="fig-push-promise">
+<span id="name-push_promise-frame"></span><div id="fig-push-promise">
 <figure id="figure-8">
             <div class="artwork art-text alignLeft art-drawing" id="section-7.2.5-2.1">
 <pre>
@@ -2840,7 +2840,7 @@ PUSH_PROMISE Frame {
 </pre>
 </div>
 <figcaption><a href="#figure-8" class="selfRef">Figure 8</a>:
-<a href="#name-push_promise-frame-payload" class="selfRef">PUSH_PROMISE Frame Payload</a>
+<a href="#name-push_promise-frame" class="selfRef">PUSH_PROMISE Frame</a>
             </figcaption></figure>
 </div>
 <p id="section-7.2.5-3">The payload consists of:<a href="#section-7.2.5-3" class="pilcrow">¶</a></p>
@@ -2893,7 +2893,7 @@ connection by either endpoint.  GOAWAY allows an endpoint to stop accepting new
 requests or pushes while still finishing processing of previously received
 requests and pushes.  This enables administrative actions, like server
 maintenance.  GOAWAY by itself does not close a connection.<a href="#section-7.2.6-1" class="pilcrow">¶</a></p>
-<span id="name-goaway-frame-payload"></span><div id="fig-goaway">
+<span id="name-goaway-frame"></span><div id="fig-goaway">
 <figure id="figure-9">
             <div class="artwork art-text alignLeft art-drawing" id="section-7.2.6-2.1">
 <pre>
@@ -2905,7 +2905,7 @@ GOAWAY Frame {
 </pre>
 </div>
 <figcaption><a href="#figure-9" class="selfRef">Figure 9</a>:
-<a href="#name-goaway-frame-payload" class="selfRef">GOAWAY Frame Payload</a>
+<a href="#name-goaway-frame" class="selfRef">GOAWAY Frame</a>
             </figcaption></figure>
 </div>
 <p id="section-7.2.6-3">The GOAWAY frame is always sent on the control stream.  In the server to client

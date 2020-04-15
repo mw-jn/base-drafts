@@ -1635,7 +1635,7 @@ Internet-Draft                   HTTP/3                       April 2020
      Data (..),
    }
 
-                        Figure 4: DATA Frame Payload
+                            Figure 4: DATA Frame
 
 7.2.2.  HEADERS
 
@@ -1648,7 +1648,7 @@ Internet-Draft                   HTTP/3                       April 2020
      Encoded Field Section (..),
    }
 
-                      Figure 5: HEADERS Frame Payload
+                          Figure 5: HEADERS Frame
 
    HEADERS frames can only be sent on request / push streams.  If a
    HEADERS frame is received on a control stream, the recipient MUST
@@ -1698,7 +1698,7 @@ Internet-Draft                   HTTP/3                       April 2020
      Push ID (..),
    }
 
-                    Figure 6: CANCEL_PUSH Frame Payload
+                        Figure 6: CANCEL_PUSH Frame
 
    The CANCEL_PUSH frame carries a Push ID encoded as a variable-length
    integer.  The Push ID identifies the server push that is being
@@ -1885,7 +1885,7 @@ Internet-Draft                   HTTP/3                       April 2020
      Encoded Field Section (..),
    }
 
-                    Figure 8: PUSH_PROMISE Frame Payload
+                        Figure 8: PUSH_PROMISE Frame
 
    The payload consists of:
 
@@ -1962,7 +1962,7 @@ Bishop                   Expires 17 October 2020               [Page 35]
 Internet-Draft                   HTTP/3                       April 2020
 
 
-                       Figure 9: GOAWAY Frame Payload
+                           Figure 9: GOAWAY Frame
 
    The GOAWAY frame is always sent on the control stream.  In the server
    to client direction, it carries a QUIC Stream ID for a client-
