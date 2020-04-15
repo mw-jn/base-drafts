@@ -829,7 +829,7 @@ table.left {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Thomson &amp; Turner</td>
-<td class="center">Expires 16 October 2020</td>
+<td class="center">Expires 17 October 2020</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -842,12 +842,12 @@ table.left {
 <dd class="internet-draft">draft-ietf-quic-tls-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2020-04-14" class="published">14 April 2020</time>
+<time datetime="2020-04-15" class="published">15 April 2020</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2020-10-16">16 October 2020</time></dd>
+<dd class="expires"><time datetime="2020-10-17">17 October 2020</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -874,11 +874,11 @@ QUIC.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 <a href="#name-note-to-readers" class="section-name selfRef">Note to Readers</a>
       </h2>
 <p id="section-note.1-1">Discussion of this draft takes place on the QUIC working group mailing list
-(quic@ietf.org), which is archived at
-<a href="https://mailarchive.ietf.org/arch/search/?email_list=quic">https://mailarchive.ietf.org/arch/search/?email_list=quic</a>.<a href="#section-note.1-1" class="pilcrow">¶</a></p>
-<p id="section-note.1-2">Working Group information can be found at <a href="https://github.com/quicwg">https://github.com/quicwg</a>; source
+(<a href="mailto:quic@ietf.org">quic@ietf.org</a>), which is archived at
+<span><a href="https://mailarchive.ietf.org/arch/search/?email_list=quic">https://mailarchive.ietf.org/arch/search/?email_list=quic</a></span>.<a href="#section-note.1-1" class="pilcrow">¶</a></p>
+<p id="section-note.1-2">Working Group information can be found at <span><a href="https://github.com/quicwg">https://github.com/quicwg</a></span>; source
 code and issues list for this draft can be found at
-<a href="https://github.com/quicwg/base-drafts/labels/-tls">https://github.com/quicwg/base-drafts/labels/-tls</a>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
+<span><a href="https://github.com/quicwg/base-drafts/labels/-tls">https://github.com/quicwg/base-drafts/labels/-tls</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
 </section>
 <div id="status-of-memo">
 <section id="section-boilerplate.1">
@@ -899,7 +899,7 @@ code and issues list for this draft can be found at
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 16 October 2020.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 17 October 2020.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1249,10 +1249,11 @@ that is, using a zero round trip setup.<a href="#section-1-2" class="pilcrow">¶
       <h2 id="name-notational-conventions">
 <a href="#section-2" class="section-number selfRef">2. </a><a href="#name-notational-conventions" class="section-name selfRef">Notational Conventions</a>
       </h2>
-<p id="section-2-1">The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
-"SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this
-document are to be interpreted as described in BCP 14 <span>[<a href="#RFC2119" class="xref">RFC2119</a>]</span> <span>[<a href="#RFC8174" class="xref">RFC8174</a>]</span>
-when, and only when, they appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶</a></p>
+<p id="section-2-1">The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL
+NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED",
+"MAY", and "OPTIONAL" in this document are to be interpreted as
+described in BCP 14 <span>[<a href="#RFC2119" class="xref">RFC2119</a>]</span> <span>[<a href="#RFC8174" class="xref">RFC8174</a>]</span> when, and only when, they
+appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶</a></p>
 <p id="section-2-2">This document uses the terminology established in <span>[<a href="#QUIC-TRANSPORT" class="xref">QUIC-TRANSPORT</a>]</span>.<a href="#section-2-2" class="pilcrow">¶</a></p>
 <p id="section-2-3">For brevity, the acronym TLS is used to refer to TLS 1.3, though a newer version
 could be used (see <a href="#tls-version" class="xref">Section 4.2</a>).<a href="#section-2-3" class="pilcrow">¶</a></p>
@@ -2967,17 +2968,10 @@ ciphertext sample reveals the exclusive OR of the protected fields.  Assuming
 that the AEAD acts as a PRF, if L bits are sampled, the odds of two ciphertext
 samples being identical approach 2^(-L/2), that is, the birthday bound. For the
 algorithms described in this document, that probability is one in 2^64.<a href="#section-9.3-5" class="pilcrow">¶</a></p>
-<dl class="dlParallel" id="section-9.3-6">
-          <dt id="section-9.3-6.1">Note:</dt>
-<dd id="section-9.3-6.2">
-  In some cases, inputs shorter than the full size required by the packet
-protection algorithm might be used.<a href="#section-9.3-6.2" class="pilcrow">¶</a>
-</dd>
-</dl>
-<p id="section-9.3-7">To prevent an attacker from modifying packet headers, the header is transitively
+<p id="section-9.3-6">To prevent an attacker from modifying packet headers, the header is transitively
 authenticated using packet protection; the entire packet header is part of the
 authenticated additional data.  Protected fields that are falsified or modified
-can only be detected once the packet protection is removed.<a href="#section-9.3-7" class="pilcrow">¶</a></p>
+can only be detected once the packet protection is removed.<a href="#section-9.3-6" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="hp-side-channel">
@@ -3079,10 +3073,10 @@ the KEY_UPDATE_ERROR (0xE), as described in <a href="#key-update-error" class="x
 <span class="refAuthor">Nir, Y.</span><span class="refAuthor"> and A. Langley</span>, <span class="refTitle">"ChaCha20 and Poly1305 for IETF Protocols"</span>, <span class="seriesInfo">RFC 8439</span>, <span class="seriesInfo">DOI 10.17487/RFC8439</span>, <time datetime="2018-06">June 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc8439">https://www.rfc-editor.org/info/rfc8439</a>&gt;</span>. </dd>
 <dt id="QUIC-RECOVERY">[QUIC-RECOVERY]</dt>
 <dd>
-<span class="refAuthor">Iyengar, J., Ed.</span><span class="refAuthor"> and I. Swett, Ed.</span>, <span class="refTitle">"QUIC Loss Detection and Congestion Control"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-quic-recovery-latest</span>, <time datetime="2020-04-14">14 April 2020</time>, <span>&lt;<a href="https://tools.ietf.org/html/draft-ietf-quic-recovery-latest">https://tools.ietf.org/html/draft-ietf-quic-recovery-latest</a>&gt;</span>. </dd>
+<span class="refAuthor">Iyengar, J., Ed.</span><span class="refAuthor"> and I. Swett, Ed.</span>, <span class="refTitle">"QUIC Loss Detection and Congestion Control"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-quic-recovery-latest</span>, <time datetime="2020-04-15">15 April 2020</time>, <span>&lt;<a href="https://tools.ietf.org/html/draft-ietf-quic-recovery-latest">https://tools.ietf.org/html/draft-ietf-quic-recovery-latest</a>&gt;</span>. </dd>
 <dt id="QUIC-TRANSPORT">[QUIC-TRANSPORT]</dt>
 <dd>
-<span class="refAuthor">Iyengar, J., Ed.</span><span class="refAuthor"> and M. Thomson, Ed.</span>, <span class="refTitle">"QUIC: A UDP-Based Multiplexed and Secure Transport"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-quic-transport-latest</span>, <time datetime="2020-04-14">14 April 2020</time>, <span>&lt;<a href="https://tools.ietf.org/html/draft-ietf-quic-transport-latest">https://tools.ietf.org/html/draft-ietf-quic-transport-latest</a>&gt;</span>. </dd>
+<span class="refAuthor">Iyengar, J., Ed.</span><span class="refAuthor"> and M. Thomson, Ed.</span>, <span class="refTitle">"QUIC: A UDP-Based Multiplexed and Secure Transport"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-quic-transport-latest</span>, <time datetime="2020-04-15">15 April 2020</time>, <span>&lt;<a href="https://tools.ietf.org/html/draft-ietf-quic-transport-latest">https://tools.ietf.org/html/draft-ietf-quic-transport-latest</a>&gt;</span>. </dd>
 <dt id="RFC2119">[RFC2119]</dt>
 <dd>
 <span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc2119">https://www.rfc-editor.org/info/rfc2119</a>&gt;</span>. </dd>
@@ -3119,7 +3113,7 @@ the KEY_UPDATE_ERROR (0xE), as described in <a href="#key-update-error" class="x
 <span class="refAuthor">Bellare, M.</span><span class="refAuthor">, Ng, R.</span><span class="refAuthor">, and B. Tackmann</span>, <span class="refTitle">"Nonces Are Noticed: AEAD Revisited"</span>, <span class="seriesInfo">DOI 10.1007/978-3-030-26948-7_9</span>, <span class="seriesInfo">Advances in Cryptology - CRYPTO 2019 pp. 235-265</span>, <time datetime="2019">2019</time>, <span>&lt;<a href="https://doi.org/10.1007/978-3-030-26948-7_9">https://doi.org/10.1007/978-3-030-26948-7_9</a>&gt;</span>. </dd>
 <dt id="QUIC-HTTP">[QUIC-HTTP]</dt>
 <dd>
-<span class="refAuthor">Bishop, M., Ed.</span>, <span class="refTitle">"Hypertext Transfer Protocol Version 3 (HTTP/3)"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-quic-http-latest</span>, <time datetime="2020-04-14">14 April 2020</time>, <span>&lt;<a href="https://tools.ietf.org/html/draft-ietf-quic-http-latest">https://tools.ietf.org/html/draft-ietf-quic-http-latest</a>&gt;</span>. </dd>
+<span class="refAuthor">Bishop, M., Ed.</span>, <span class="refTitle">"Hypertext Transfer Protocol Version 3 (HTTP/3)"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-quic-http-latest</span>, <time datetime="2020-04-15">15 April 2020</time>, <span>&lt;<a href="https://tools.ietf.org/html/draft-ietf-quic-http-latest">https://tools.ietf.org/html/draft-ietf-quic-http-latest</a>&gt;</span>. </dd>
 <dt id="RFC2818">[RFC2818]</dt>
 <dd>
 <span class="refAuthor">Rescorla, E.</span>, <span class="refTitle">"HTTP Over TLS"</span>, <span class="seriesInfo">RFC 2818</span>, <span class="seriesInfo">DOI 10.17487/RFC2818</span>, <time datetime="2000-05">May 2000</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc2818">https://www.rfc-editor.org/info/rfc2818</a>&gt;</span>. </dd>
